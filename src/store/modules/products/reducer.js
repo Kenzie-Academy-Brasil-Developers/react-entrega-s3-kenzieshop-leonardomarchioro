@@ -4,6 +4,8 @@ import PC3 from "../../../assets/PC3.png";
 import Poltrona from "../../../assets/Poltrona.jpg";
 import Cadeira from "../../../assets/Cadeira.jpg";
 
+import { ALL_PRODUCT, FILTER_PRODUCT } from "./actionsType";
+
 const products = [
   {
     name: "Computador Gamer - GTX1650 - I5 - SSD240GB",
@@ -69,4 +71,19 @@ const products = [
   },
 ];
 
-export default products;
+const productsReducer = (state = products, action) => {
+  console.log(action);
+  switch (action.type) {
+    case FILTER_PRODUCT:
+      const filterComputer = products.filter(
+        (product) => product.category === action.filter
+      );
+      return filterComputer;
+    case ALL_PRODUCT:
+      return products;
+    default:
+      return state;
+  }
+};
+
+export default productsReducer;
