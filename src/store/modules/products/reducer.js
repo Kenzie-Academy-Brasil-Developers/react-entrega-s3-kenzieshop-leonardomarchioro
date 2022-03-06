@@ -22,6 +22,7 @@ const products = [
     ],
     category: "Computador",
     img: PC1,
+    id: 1,
   },
   {
     name: "Computador Gamer - RTX3060 - I5 - SSD240GB",
@@ -38,6 +39,7 @@ const products = [
     ],
     category: "Computador",
     img: PC2,
+    id: 2,
   },
   {
     name: "Computador Gamer - RTX3060 - Rayzen 5 - HD 1TB",
@@ -54,6 +56,7 @@ const products = [
     ],
     category: "Computador",
     img: PC3,
+    id: 3,
   },
   {
     name: "Poltrona Gamer",
@@ -61,6 +64,7 @@ const products = [
     description: ["Poltrona Gamer Mancer Fenrir RGB, Preto, MCR-FNR-GRB01"],
     category: "Cadeira",
     img: Poltrona,
+    id: 4,
   },
   {
     name: "Cadeira Gamer AKRacing",
@@ -68,6 +72,7 @@ const products = [
     description: ["Cadeira Gamer AKRacing Nitro Azul,10031-5"],
     category: "Cadeira",
     img: Cadeira,
+    id: 5,
   },
 ];
 

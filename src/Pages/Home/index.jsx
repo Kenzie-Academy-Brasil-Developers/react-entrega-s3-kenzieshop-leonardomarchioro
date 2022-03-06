@@ -1,35 +1,21 @@
-import { useSelector, useDispatch } from "react-redux";
-import {
-  filterProduct,
-  allProducts,
-} from "../../store/modules/products/actions";
+import { useSelector } from "react-redux";
+import CardProduct from "../../components/CardProduct";
+import { ContainerHome } from "./style";
+import HeaderHome from "../../components/HeaderHome";
 
 const Home = () => {
   const { products } = useSelector((state) => state);
 
-  const dispatch = useDispatch();
-
-  const filter = (filter) => {
-    dispatch(filterProduct(filter));
-  };
-
-  const allProductsList = () => {
-    dispatch(allProducts());
-  };
-
-  console.log(products);
   return (
-    <div>
+    <ContainerHome>
       HOME
-      <button onClick={() => filter("Computador")}>Computadores</button>
-      <button onClick={() => filter("Cadeira")}>Cadeiras</button>
-      <button onClick={allProductsList}>Todos</button>
+      <HeaderHome />
       <ul>
-        {products.map((p, i) => (
-          <li key={i}>{p.name}</li>
+        {products.map((product, i) => (
+          <CardProduct key={i} product={product} />
         ))}
       </ul>
-    </div>
+    </ContainerHome>
   );
 };
 export default Home;
