@@ -77,7 +77,6 @@ const products = [
 ];
 
 const productsReducer = (state = products, action) => {
-  console.log(action);
   switch (action.type) {
     case FILTER_PRODUCT:
       const filterComputer = products.filter(

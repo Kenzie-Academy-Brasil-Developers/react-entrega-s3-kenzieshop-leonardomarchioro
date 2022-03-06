@@ -1,13 +1,13 @@
-import { Card } from "./style";
 import Button from "../Button";
 import { useDispatch } from "react-redux";
+import { Card } from "./style";
 import cartThunk from "../../store/modules/cart/thunk";
 
-const CardProduct = ({ product }) => {
+const CardProductonCart = ({ product }) => {
   const dispatch = useDispatch();
 
-  const addCart = () => {
-    dispatch(cartThunk(product, true));
+  const removeProdutc = () => {
+    dispatch(cartThunk(product, false));
   };
 
   return (
@@ -16,9 +16,8 @@ const CardProduct = ({ product }) => {
       <h3>{product.category}</h3>
       <h2>{product.name}</h2>
       <span>R$ {product.price.toFixed(2)}</span>
-      <Button type="button" text="Adicionar ao carrinho" onClick={addCart} />
+      <Button type="button" text="Remover" onClick={removeProdutc} />
     </Card>
   );
 };
-
-export default CardProduct;
+export default CardProductonCart;
