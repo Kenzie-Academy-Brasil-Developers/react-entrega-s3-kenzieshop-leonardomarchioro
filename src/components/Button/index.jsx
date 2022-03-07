@@ -1,10 +1,12 @@
+import { ContainerButton } from "./style";
+
 const Button = ({ type, text, ...rest }) => {
   return (
-    <div>
+    <ContainerButton>
       <button type={type} {...rest}>
         {text}
       </button>
-    </div>
+    </ContainerButton>
   );
 };
 

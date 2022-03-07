@@ -8,7 +8,6 @@ const Home = () => {
 
   return (
     <ContainerHome>
-      HOME
       <HeaderHome />
       <ul>
         {products.map((product, i) => (

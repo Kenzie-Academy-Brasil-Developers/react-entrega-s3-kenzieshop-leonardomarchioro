@@ -5,6 +5,8 @@ import {
   allProducts,
 } from "../../store/modules/products/actions.js";
 import Button from "../Button";
+import { ContainerHeader, ContainerNavBar } from "./style.js";
+import { RiShoppingCartLine } from "react-icons/ri";
 
 const HeaderHome = () => {
   const dispatch = useDispatch();
@@ -18,20 +20,28 @@ const HeaderHome = () => {
   };
 
   return (
-    <div>
-      <Button
-        type={"button"}
-        text={"Computadores"}
-        onClick={() => filter("Computador")}
-      />
-      <Button
-        type={"button"}
-        text={"Cadeira"}
-        onClick={() => filter("Cadeira")}
-      />
-      <Button type={"button"} text={"Todos"} onClick={allProductsList} />
-      <Link to="/cart">Carrinho</Link>
-    </div>
+    <ContainerHeader>
+      <h1>Kenzie Shop</h1>
+      <ContainerNavBar>
+        <div>
+          <Button
+            type={"button"}
+            text={"Computadores"}
+            onClick={() => filter("Computador")}
+          />
+          <Button
+            type={"button"}
+            text={"Cadeira"}
+            onClick={() => filter("Cadeira")}
+          />
+          <Button type={"button"} text={"Todos"} onClick={allProductsList} />
+        </div>
+
+        <Link to="/cart">
+          <RiShoppingCartLine />
+        </Link>
+      </ContainerNavBar>
+    </ContainerHeader>
   );
 };
 

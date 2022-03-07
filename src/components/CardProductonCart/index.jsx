@@ -2,12 +2,14 @@ import Button from "../Button";
 import { useDispatch } from "react-redux";
 import { Card } from "./style";
 import cartThunk from "../../store/modules/cart/thunk";
+import { toast } from "react-toastify";
 
 const CardProductonCart = ({ product }) => {
   const dispatch = useDispatch();
 
   const removeProdutc = () => {
     dispatch(cartThunk(product, false));
+    toast.success("Produto removido");
   };
 
   return (

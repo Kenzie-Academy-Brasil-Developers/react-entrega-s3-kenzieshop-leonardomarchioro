@@ -3,6 +3,7 @@ import Button from "../Button";
 import { useDispatch } from "react-redux";
 import cartThunk from "../../store/modules/cart/thunk";
 import { useSelector } from "react-redux";
+import { toast } from "react-toastify";
 
 const CardProduct = ({ product }) => {
   const dispatch = useDispatch();
@@ -10,8 +11,10 @@ const CardProduct = ({ product }) => {
 
   const addCart = () => {
     if (cart.includes(product)) {
+      toast.error("Produto já foi adicionado ao carrinho");
     } else {
       dispatch(cartThunk(product, true));
+      toast.success("Produto adicionado ao carrinho com sucesso!");
     }
   };
 

@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import cartThunk from "../../store/modules/cart/thunk";
 import { useHistory } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const OrderSummary = () => {
   const { cart } = useSelector((state) => state);
@@ -14,6 +15,7 @@ const OrderSummary = () => {
   const finishOrder = () => {
     history.push("/");
     dispatch(cartThunk());
+    toast.success("Compra finalizada com sucesso!");
   };
 
   return (
