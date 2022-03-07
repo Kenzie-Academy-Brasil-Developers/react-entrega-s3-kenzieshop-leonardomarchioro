@@ -39,6 +39,8 @@ export const GlobalStyle = createGlobalStyle`
         text-decoration: none;
     }
     .Toastify__toast-theme--light {
-    background-color: var(--grey-2);
+    background-color: var(--grey-1);
+    color: var(--grey-0)
   }
+
 `;

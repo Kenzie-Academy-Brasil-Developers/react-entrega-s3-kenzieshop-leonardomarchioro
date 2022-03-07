@@ -1,7 +1,6 @@
 import PC1 from "../../../assets/PC1.jpg";
 import PC2 from "../../../assets/PC2.jpg";
 import PC3 from "../../../assets/PC3.png";
-import Poltrona from "../../../assets/Poltrona.jpg";
 import Cadeira from "../../../assets/Cadeira.jpg";
 
 import { ALL_PRODUCT, FILTER_PRODUCT } from "./actionsType";
@@ -29,18 +28,11 @@ const products = [
     id: 3,
   },
   {
-    name: "Poltrona Gamer",
-    price: 1999,
-    category: "Cadeira",
-    img: Poltrona,
-    id: 4,
-  },
-  {
     name: "Cadeira Gamer AKRacing",
     price: 1799,
     category: "Cadeira",
     img: Cadeira,
-    id: 5,
+    id: 4,
   },
 ];
 

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const ContainerHeader = styled.div`
+  width: 100%;
   height: 120px;
   padding: 20px;
   background: var(--color-primary-50);
@@ -30,6 +31,7 @@ export const ContainerNavBar = styled.div`
       background-color: var(--background);
       color: var(--color-primary-50);
       font-weight: bold;
+      transition: box-shadow 0.5s;
     }
     > div > button:hover {
       filter: brightness(0.9);
@@ -44,6 +46,7 @@ export const ContainerNavBar = styled.div`
     height: 35px;
     display: flex;
     align-items: center;
+    transition: background 0.5s;
 
     > svg {
       color: var(--color-primary-50);
