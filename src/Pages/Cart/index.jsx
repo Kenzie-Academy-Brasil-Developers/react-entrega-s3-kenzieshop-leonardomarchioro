@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import CardProductonCart from "../../components/CardProductonCart";
+import OrderSummary from "../../components/OrderSummary";
 
 const Cart = () => {
   const { cart } = useSelector((state) => state);
@@ -13,6 +14,7 @@ const Cart = () => {
           <CardProductonCart key={i} product={product} />
         ))}
       </ul>
+      <OrderSummary />
     </div>
   );
 };

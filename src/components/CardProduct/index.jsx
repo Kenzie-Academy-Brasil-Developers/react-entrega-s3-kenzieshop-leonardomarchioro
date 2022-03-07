@@ -2,12 +2,17 @@ import { Card } from "./style";
 import Button from "../Button";
 import { useDispatch } from "react-redux";
 import cartThunk from "../../store/modules/cart/thunk";
+import { useSelector } from "react-redux";
 
 const CardProduct = ({ product }) => {
   const dispatch = useDispatch();
+  const { cart } = useSelector((state) => state);
 
   const addCart = () => {
-    dispatch(cartThunk(product, true));
+    if (cart.includes(product)) {
+    } else {
+      dispatch(cartThunk(product, true));
+    }
   };
 
   return (

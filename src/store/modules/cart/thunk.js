@@ -1,10 +1,17 @@
-import { addProductCart, removeProductCart } from "./actions";
+import { addProductCart, removeProductCart, finishOrder } from "./actions";
 
 const cartThunk = (product, status) => (dispatch) => {
-  if (status) {
-    dispatch(addProductCart(product));
+  if (product) {
+    if (status) {
+      dispatch(addProductCart(product));
+      console.log("add");
+    } else {
+      dispatch(removeProductCart(product));
+      console.log("remove");
+    }
   } else {
-    dispatch(removeProductCart(product));
+    dispatch(finishOrder());
+    console.log("finalizou");
   }
 };
 export default cartThunk;
