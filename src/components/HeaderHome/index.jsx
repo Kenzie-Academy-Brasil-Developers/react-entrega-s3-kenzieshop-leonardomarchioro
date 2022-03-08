@@ -1,14 +1,17 @@
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 import {
   filterProduct,
   allProducts,
 } from "../../store/modules/products/actions.js";
 import Button from "../Button";
-import { ContainerHeader, ContainerNavBar } from "./style.js";
+import { ContainerHeader, ContainerNavBar, ContainerLink } from "./style.js";
 import { RiShoppingCartLine } from "react-icons/ri";
 
 const HeaderHome = () => {
+  const { cart } = useSelector((state) => state);
+
   const dispatch = useDispatch();
 
   const filter = (filter) => {
@@ -36,10 +39,12 @@ const HeaderHome = () => {
           />
           <Button type={"button"} text={"Todos"} onClick={allProductsList} />
         </div>
-
-        <Link to="/cart">
-          <RiShoppingCartLine />
-        </Link>
+        <ContainerLink>
+          <Link to="/cart">
+            <RiShoppingCartLine />
+          </Link>
+          <p>{cart.length}</p>
+        </ContainerLink>
       </ContainerNavBar>
     </ContainerHeader>
   );

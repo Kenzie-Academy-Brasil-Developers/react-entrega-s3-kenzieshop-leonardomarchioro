@@ -22,7 +22,7 @@ export const ContainerNavBar = styled.div`
   justify-content: space-around;
   width: 640px;
 
-  > div {
+  div {
     display: flex;
     justify-content: space-between;
     width: 430px;
@@ -38,6 +38,10 @@ export const ContainerNavBar = styled.div`
       box-shadow: 0px 0px 8px 4px #353333b8;
     }
   }
+`;
+
+export const ContainerLink = styled.section`
+  display: flex;
 
   > a {
     background-color: var(--background);
@@ -58,5 +62,18 @@ export const ContainerNavBar = styled.div`
     > svg {
       color: #fff;
     }
+  }
+  > p {
+    position: relative;
+    bottom: 12px;
+    left: -15px;
+    background: var(--negative);
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    border-radius: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;

@@ -1,5 +1,4 @@
 import { Card, Container } from "./style";
-import Button from "../Button";
 import { useDispatch } from "react-redux";
 import cartThunk from "../../store/modules/cart/thunk";
 import { useSelector } from "react-redux";

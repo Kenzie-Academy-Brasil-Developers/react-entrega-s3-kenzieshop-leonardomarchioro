@@ -3,6 +3,8 @@ import { useDispatch } from "react-redux";
 import cartThunk from "../../store/modules/cart/thunk";
 import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
+import { ContainerOrder } from "./style";
+import Button from "../Button";
 
 const OrderSummary = () => {
   const { cart } = useSelector((state) => state);
@@ -19,12 +21,14 @@ const OrderSummary = () => {
   };
 
   return (
-    <div>
+    <ContainerOrder>
       <h1>Resumo do pedido</h1>
-      <h3>Quantidade: {amount}</h3>
-      <h3>Valor total: {total}</h3>
-      <button onClick={finishOrder}>Finalizar pedido</button>
-    </div>
+      <div>
+        <h3>{amount} Produtos</h3>
+        <h3>Valor total: R$ {total.toFixed(2)}</h3>
+      </div>
+      <Button type="button" text="Finalizar pedido" onClick={finishOrder} />
+    </ContainerOrder>
   );
 };
 

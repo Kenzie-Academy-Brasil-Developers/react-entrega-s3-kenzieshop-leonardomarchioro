@@ -1,6 +1,6 @@
 import Button from "../Button";
 import { useDispatch } from "react-redux";
-import { Card } from "./style";
+import { Card, Container } from "./style";
 import cartThunk from "../../store/modules/cart/thunk";
 import { toast } from "react-toastify";
 
@@ -15,10 +15,14 @@ const CardProductonCart = ({ product }) => {
   return (
     <Card>
       <img src={product.img} alt={product.name} />
-      <h3>{product.category}</h3>
+      <div>
+        <h3>{product.category}</h3>
+      </div>
       <h2>{product.name}</h2>
-      <span>R$ {product.price.toFixed(2)}</span>
-      <Button type="button" text="Remover" onClick={removeProdutc} />
+      <Container>
+        <span>R$ {product.price.toFixed(2)}</span>
+        <Button type="button" text="X" onClick={removeProdutc} />
+      </Container>
     </Card>
   );
 };
