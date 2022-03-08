@@ -29,7 +29,7 @@ const HeaderHome = () => {
         <div>
           <Button
             type={"button"}
-            text={"Computadores"}
+            text={"Computador"}
             onClick={() => filter("Computador")}
           />
           <Button

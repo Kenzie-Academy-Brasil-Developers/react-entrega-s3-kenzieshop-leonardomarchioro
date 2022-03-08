@@ -11,9 +11,14 @@ export const ContainerOrder = styled.div`
   box-shadow: 0px 0px 13px 0px black;
   border-radius: 8px;
   border: var(--color-primary-50) 2px solid;
+  margin: 20px;
 
+  h1 {
+    font-size: 20px;
+  }
   > div {
     display: flex;
+    flex-direction: column;
     width: 100%;
   }
 
@@ -27,5 +32,8 @@ export const ContainerOrder = styled.div`
   > div > button:hover {
     filter: brightness(0.95);
     box-shadow: 0px 0px 5px 0px black;
+  }
+  @media (max-width: 410px) {
+    width: 300px;
   }
 `;

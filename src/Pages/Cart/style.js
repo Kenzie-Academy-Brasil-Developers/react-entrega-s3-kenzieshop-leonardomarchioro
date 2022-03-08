@@ -49,4 +49,31 @@ export const ContainerCart = styled.div`
     justify-content: space-around;
     flex-direction: row;
   }
+  @media (max-width: 755px) {
+    > div {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    > div > ul {
+      width: 300px;
+      overflow: scroll;
+      height: 500px;
+    }
+  }
+
+  @media (max-width: 410px) {
+    header > h1 {
+      font-size: 25px;
+    }
+    header > a {
+      width: 80px;
+    }
+  }
+`;
+
+export const ContainerWarning = styled.section`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;

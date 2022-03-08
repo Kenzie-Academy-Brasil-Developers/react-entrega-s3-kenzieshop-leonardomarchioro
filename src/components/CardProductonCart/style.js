@@ -37,6 +37,9 @@ export const Card = styled.div`
     border: var(--color-primary-50) solid 3px;
     box-shadow: 0px 0px 8px 4px #353333b8;
   }
+  @media (max-width: 755px) {
+    width: 300px;
+  }
 `;
 
 export const Container = styled.div`
