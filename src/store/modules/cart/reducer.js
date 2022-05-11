@@ -6,7 +6,10 @@ const cartReducer = (state = [], action) => {
       return [...state, action.product];
 
     case REMOVE_CART:
-      const removed = state.filter((product) => product !== action.product);
+      const indexItem = state.findIndex(
+        (product) => product === action.product
+      );
+      const removed = state.filter((product, index) => index !== indexItem);
       return removed;
 
     case FINISH_ORDER:
